@@ -106,7 +106,7 @@ def solve_wordle():
 import os
 def five_letter_words():
 
-    path = os.path.dirname(__file__) + "\\words.txt";
+    path = os.path.join(os.path.dirname(__file__), "words.txt");
     listt = []
     
     with open(path, 'r') as f:
