@@ -11,7 +11,7 @@ def solve_wordle():
 
     for turn in range(6):
 
-        print("-------------------------------\nTurn {} Guess:".format(turn))
+        print("-------------------------------\nTurn {} Guess:".format(turn + 1))
         guess = input().upper();
     
         print("Known Order (use ; for unknown order): ")
