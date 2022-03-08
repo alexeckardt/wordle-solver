@@ -132,7 +132,7 @@ def five_letter_words():
     #Open File; List Lines
     path = os.path.join(os.path.dirname(__file__), "words.txt");
     with open(path, 'r') as f:
-        listt = [line.strip() for line in f]
+        listt = [line.strip().upper() for line in f]
 
     return listt
 
@@ -151,7 +151,7 @@ def print_return_result(listOfValidWords, letterGroups):
     #Print
     print("Suggested Next Guesses:\n")
     for i in range(min(len(sortorg), 10)):
-        print("{}: {}".format(sortorg[i][0], sortorg[i][1]))
+        print("{}: {}".format(sortorg[i][0], round(100*sortorg[i][1])/100))
     
 #Constant
 def get_letter_probs():
